@@ -31,7 +31,7 @@
         <button type="submit">Apply</button>
     </form>
 
-    <form action="{% url 'compare_institutions' %}" method="GET">
+    <form class="compare-form" action="{% url 'compare_institutions' %}" method="GET">
         <input type="hidden" name="category" value="{{ selected_category }}">
 
         <table>
@@ -63,8 +63,9 @@
             </tbody>
         </table>
 
-        <br>
-        <button type="submit">Compare Selected</button>
+        <div class="compare-actions">
+            <button type="submit">Compare Selected</button>
+        </div>
     </form>
 
     <div class="pagination">
