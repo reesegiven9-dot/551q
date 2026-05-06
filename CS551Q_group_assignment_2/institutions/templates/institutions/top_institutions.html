@@ -3,7 +3,7 @@
 {% block content %}
     <h1>Top Institutions</h1>
 
-    <form method="GET">
+    <form method="GET" class="filter-form">
         <select name="category">
             {% for value, label in category_choices %}
                 <option value="{{ value }}" {% if selected_category == value %}selected{% endif %}>
@@ -36,7 +36,8 @@
     <form action="{% url 'compare_institutions' %}" method="GET">
         <input type="hidden" name="category" value="{{ selected_category }}">
 
-        <table>
+        <div class="table-wrapper">
+            <table>
             <thead>
                 <tr>
                     <th>Rank</th>
@@ -66,8 +67,11 @@
                     </tr>
                 {% endfor %}
             </tbody>
-        </table>
+            </table>
+        </div>
 
-        <button type="submit">Compare Selected</button>
+        <div class="form-actions">
+            <button type="submit">Compare Selected</button>
+        </div>
     </form>
 {% endblock %}

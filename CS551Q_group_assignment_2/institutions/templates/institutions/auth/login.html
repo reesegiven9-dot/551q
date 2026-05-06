@@ -1,0 +1,33 @@
+{% extends 'institutions/base.html' %}
+
+{% block content %}
+    <section class="auth-card">
+        <div class="auth-header">
+            <p class="eyebrow">Welcome back</p>
+            <h1>Log in to your account</h1>
+            <p>Access saved comparisons and continue exploring institution performance.</p>
+        </div>
+
+        <form method="POST" class="auth-form">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+
+            {% for field in form %}
+                <div class="form-field">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="field-errors">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            <button type="submit" class="auth-submit">Log in</button>
+        </form>
+
+        <p class="auth-switch">
+            New to the dashboard?
+            <a href="{% url 'register' %}">Create an account</a>
+        </p>
+    </section>
+{% endblock %}
