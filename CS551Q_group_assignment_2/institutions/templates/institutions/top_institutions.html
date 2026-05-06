@@ -33,7 +33,7 @@
         {% endif %}
     </h2>
 
-    <form action="{% url 'compare_institutions' %}" method="GET">
+    <form class="compare-form" action="{% url 'compare_institutions' %}" method="GET">
         <input type="hidden" name="category" value="{{ selected_category }}">
 
         <table>
@@ -68,6 +68,8 @@
             </tbody>
         </table>
 
-        <button type="submit">Compare Selected</button>
+        <div class="compare-actions">
+            <button type="submit">Compare Selected</button>
+        </div>
     </form>
 {% endblock %}

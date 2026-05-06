@@ -221,3 +221,97 @@ footer {
     color: #ecf0f1;
     margin-top: 40px;
 }
+
+/* Authentication pages */
+.auth-card {
+    max-width: 520px;
+    margin: 10px auto;
+    padding: 32px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.auth-card__intro {
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #3498db;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-form label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.auth-form input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 8px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.auth-form button {
+    margin-top: 8px;
+}
+
+.help-text {
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.error {
+    margin: 0 0 8px;
+    color: #b91c1c;
+}
+
+.auth-switch {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.auth-switch a {
+    color: #2980b9;
+    font-weight: 600;
+}
+
+/* Comparison controls */
+.compare-form {
+    margin-bottom: 24px;
+}
+
+.compare-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+}
+
+@media (max-width: 640px) {
+    .container {
+        margin: 12px;
+        padding: 16px;
+        overflow-x: auto;
+    }
+
+    .compare-actions button,
+    .auth-form button {
+        width: 100%;
+    }
+}
