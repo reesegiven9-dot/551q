@@ -32,23 +32,90 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
-nav strong {
+.site-nav {
+    position: relative;
+    min-height: 40px;
+}
+
+.site-logo {
     font-size: 1.2rem;
-    margin-right: 20px;
+    flex: 1;
+}
+
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.auth-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
 }
 
 nav a {
     color: #ecf0f1;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: #3498db;
+}
+
+.auth-button {
+    border: 1px solid rgba(236, 240, 241, 0.75);
+    border-radius: 4px;
+    padding: 8px 14px;
+}
+
+.auth-button:hover {
+    background-color: #3498db;
+    border-color: #3498db;
+    color: white;
+}
+
+.register-button {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.register-button:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+@media (max-width: 760px) {
+    .site-nav {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .site-logo,
+    .auth-links {
+        flex: 0 0 auto;
+    }
+
+    .nav-links {
+        position: static;
+        order: 3;
+        transform: none;
+        flex: 1 0 100%;
+        flex-wrap: wrap;
+    }
+
+    .auth-links {
+        margin-left: auto;
+    }
 }
 
 /* Forms & Inputs */
