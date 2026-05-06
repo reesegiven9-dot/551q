@@ -315,3 +315,71 @@ footer {
         width: 100%;
     }
 }
+
+/* UK performance summary */
+.uk-performance-panel {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 28px -20px 30px;
+    padding: 16px 20px 24px;
+    background-color: #fafafa;
+}
+
+.uk-performance-panel h2 {
+    margin: 0 0 26px;
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.uk-performance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    gap: 18px;
+}
+
+.performance-summary-table {
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid #d8dee6;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+.performance-summary-table th,
+.performance-summary-table td {
+    text-align: center;
+}
+
+.performance-summary-table th {
+    background-color: #f1f5f9;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.performance-summary-table td {
+    height: 74px;
+    color: #666;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .uk-performance-grid {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .uk-performance-panel {
+        margin-right: -16px;
+        margin-left: -16px;
+    }
+
+    .uk-performance-grid {
+        grid-template-columns: 1fr;
+    }
+}
